@@ -22,7 +22,8 @@
 <meta name="keywords" content="" />
 
 
-<meta name="description" content="1.前言&emsp;&emsp;作为IT领域的一员，怎么能没有自己的博客呢。于是，我便按照各博客大神的教程搭建了自己的独立博客。每天花一些时间来写博客，期初还是挺痛苦的，在文笔和内容写作水平方面..." />
+<meta name="description" content="1.前言
+&emsp;&emsp;作为IT领域的一员，怎么能没有自己的博客呢。于是，我便按照各博客大神的教程搭建了自己的独立博客。每天花一些时间来写博客，期初还是挺痛苦的，在文笔和内容写作水平方..." />
 
 
 <meta name="robots" content="all" />
@@ -74,7 +75,7 @@
 <![endif]-->
 <body>
     <header class="main-header"  style="background-image:url(
-    http://snippet.shenliyang.com/img/banner.jpg)"
+    /./img/banner.jpg)"
      >
     <div class="main-header-box">
         <a class="header-avatar" href="/" title='John Doe'>
@@ -108,23 +109,28 @@
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/前端/"><i class="fa "></i>
-                                前端</a>
+                            <a href="/categories/IT/"><i class="fa "></i>
+                                IT</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/后端/"><i class="fa "></i>
-                                后端</a>
+                            <a href="/categories/learn/"><i class="fa "></i>
+                                学习</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/工具/"><i class="fa "></i>
+                            <a href="/categories/life/"><i class="fa "></i>
+                                生活</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/tool/"><i class="fa "></i>
                                 工具</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
                             <a href="/archives/"><i class="fa "></i>
-                                时间轴</a>
+                                归档</a>
                         </li>
                         
                     </ul>
@@ -175,9 +181,11 @@
     </div>
     
     <div class="post-body post-content">
-        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a><strong>1.前言</strong></h3><p>&emsp;&emsp;作为IT领域的一员，怎么能没有自己的博客呢。于是，我便按照各博客大神的教程搭建了自己的独立博客。每天花一些时间来写博客，期初还是挺痛苦的，在文笔和内容写作水平方面就显得比较拙劣。急需多看些文学类的书，期待自己慢慢的提升。</p>
+        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a><strong>1.前言</strong></h3><hr>
+<p>&emsp;&emsp;作为IT领域的一员，怎么能没有自己的博客呢。于是，我便按照各博客大神的教程搭建了自己的独立博客。每天花一些时间来写博客，期初还是挺痛苦的，在文笔和内容写作水平方面就显得比较拙劣。急需多看些文学类的书，期待自己慢慢的提升。</p>
 <p>大多数人习惯选择懒惰，会优先选择安逸、选择简单，而少部分选择先苦后甜，选择坚持各自的兴趣爱好，选择将其变成习惯。我跟随少部分的脚步，做了决定，开始写一点东西，无论写技术还是写生活，希望将这些点点滴滴记录在博客中，为了沉淀信息，同时见证自己的成长。</p>
-<h3 id="2-博客搭建"><a href="#2-博客搭建" class="headerlink" title="2.博客搭建"></a><strong>2.博客搭建</strong></h3><p>博客框架:Hexo<br>代码托管:GitHub（借助GithubPage）</p>
+<h3 id="2-博客搭建"><a href="#2-博客搭建" class="headerlink" title="2.博客搭建"></a><strong>2.博客搭建</strong></h3><hr>
+<p>博客框架:Hexo<br>代码托管:GitHub（借助GithubPage）</p>
 <h4 id="2-1准备环境"><a href="#2-1准备环境" class="headerlink" title="2.1准备环境"></a><strong>2.1准备环境</strong></h4><p>1.<a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a> 下载并安装。<br>2.<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> 下载并安装。（下载很慢，请耐心等待）<br>由于我是win10下进行的，无脑式下一步到底。这里不进行详细的环境搭建步骤的梳理，具体可以查看参考链接部分（其他博客主写的超级详细）。<br>3.安装所需依赖，命令行（Git Bash）依次运行以下命令:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli hexo-server hexo-deployer-git -g</span><br></pre></td></tr></table></figure>
 <p>4.初始化Hexo（folder为项目路径）</p>
@@ -193,9 +201,25 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">返回信息：Hi IamRabbitSir! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
 <p>3.回到GitHub上，右上角+，New SSH key，Title:随便（GithubBlog），把key粘贴进去（密钥文件内容路径C:\Users\Administrator.ssh\id_rsa.pub）<br>4.修改_config.yml（在项目目录下）。文件末尾修改为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;Github账号名称&gt;&#x2F;&lt;Github账号名称&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>注：库路径可以直接复制GitHub上SSH路径<br>5.推送到GithubPages。在命令行（即Git Bash）依次输入以下命令，最后返回INFO Deploy done: git即成功推送：</p>
-<h3 id="3-主题优化"><a href="#3-主题优化" class="headerlink" title="3.主题优化"></a><strong>3.主题优化</strong></h3><p>&emsp;&emsp;主题的选择着实让人头疼，这个好看那个也好看，选择哪种主题看个人喜好。有能力的可以尝试将主题优化（修改一些源代码或加一些插件），成为独具特色博客。</p>
-<h4 id="3-1添加文章"><a href="#3-1添加文章" class="headerlink" title="3.1添加文章"></a><strong>3.1添加文章</strong></h4><h4 id="3-2添加图片"><a href="#3-2添加图片" class="headerlink" title="3.2添加图片"></a><strong>3.2添加图片</strong></h4><h3 id="4-知识点"><a href="#4-知识点" class="headerlink" title="4.知识点"></a><strong>4.知识点</strong></h3><p>npm install 命令用来安装模块到 node_modules 目录</p>
+<p>注：库路径可以直接复制GitHub上SSH路径<br>5.推送到GithubPages。在命令行（即Git Bash）依次输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>g补全：generate<br>Generate static files.<br>d补全：deploy<br>Deploy your website.<br>最后返回INFO Deploy done: git即成功推送<br>6.等待几分钟，浏览器访问网址：https://&lt;Github账号名称&gt;.github.io</p>
+<h3 id="3-主题优化"><a href="#3-主题优化" class="headerlink" title="3.主题优化"></a><strong>3.主题优化</strong></h3><hr>
+<p>&emsp;&emsp;主题的选择着实让人头疼，这个好看那个也好看，选择哪种主题看个人喜好，我喜欢简洁风格，又功能齐全的主题hexo-theme-snippet。有能力的可以尝试将主题优化（修改一些源代码或加一些插件），成为独具特色的博客。<br>1.下载主题<br>2.将下载好的主题文件夹，粘贴到站点目录的themes下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: &lt;主题文件夹的名称&gt;</span><br></pre></td></tr></table></figure>
+<p>自定义样式见参考链接（博客大神值得学习）</p>
+<h4 id="3-1添加文章"><a href="#3-1添加文章" class="headerlink" title="3.1添加文章"></a><strong>3.1添加文章</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>注：[layout]可以为以下三种：</p>
+<ul>
+<li>post 新建博文</li>
+<li>page 新建页面（如404，分类）</li>
+<li>draft 草稿<br>title是markdown文章的文件名称，也是文章访问路径<br>目前阶段内容直接修改.md文件，按照markdown格式编写。<br>一般会用到以下格式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ---  横线分隔符</span><br><span class="line">$ ###  二级标题</span><br><span class="line">$ #### 三级标题</span><br><span class="line">$ **文字** 加粗</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-2添加图片"><a href="#3-2添加图片" class="headerlink" title="3.2添加图片"></a><strong>3.2添加图片</strong></h4><p>可以把图片上传到免费图床服务器，然后把链接放到文章中</p>
+<h3 id="4-知识点"><a href="#4-知识点" class="headerlink" title="4.知识点"></a><strong>4.知识点</strong></h3><hr>
+<p>从<a href="http://caibaojian.com/npm/" target="_blank" rel="noopener">npm安装文档</a> 学习，npm install 命令用来安装模块到 node_modules 目录，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install &lt;packageName&gt;</span><br></pre></td></tr></table></figure>
 <p>安装之前，npm install会先检查，node_modules目录之中是否已经存在指定模块。如果存在，就不再重新安装了。</p>
 <ul>
@@ -203,8 +227,8 @@
 <li>npm install <packageName> -g 安装模块到全局，一般是安装到node的安装目录的node_modules</li>
 <li>npm install <packageName> –save 安装模块到项目的node_modules文件夹</li>
 </ul>
-<p>参考:<a href="http://caibaojian.com/npm/" target="_blank" rel="noopener">npm安装文档</a></p>
-<h3 id="5-参考链接"><a href="#5-参考链接" class="headerlink" title="5.参考链接"></a><strong>5.参考链接</strong></h3><p>更多其他信息:<a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">https://www.simon96.online/2018/10/12/hexo-tutorial/</a></p>
+<h3 id="5-参考链接"><a href="#5-参考链接" class="headerlink" title="5.参考链接"></a><strong>5.参考链接</strong></h3><hr>
+<p>更多其他信息:<a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">https://www.simon96.online/2018/10/12/hexo-tutorial/</a></p>
 
     </div>
     
@@ -212,7 +236,7 @@
         <div>
             
             转载声明：
-            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            本博客文章转载请注明出处 © <a href="" target="_blank">Snippet</a>
             
             
         </div>
