@@ -14,12 +14,12 @@
     <meta name="format-detection" content="telephone=no,email=no,adress=no">
     <meta name="browsermode" content="application">
     <meta name="screen-orientation" content="portrait">
-    <meta name="theme-version" content="1.2.3">
+    <meta name="theme-version" content="1.2.1">
     <meta name="root" content="/">
     <link rel="dns-prefetch" href="https://iamrabbitsir.github.io">
     <!--SEO-->
 
-<meta name="keywords" content="" />
+<meta name="keywords" content="搭建博客" />
 
 
 <meta name="description" content="1.前言
@@ -111,22 +111,22 @@
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/IT/"><i class="fa "></i>
+                            <a href="/IT/"><i class="fa "></i>
                                 IT</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/learn/"><i class="fa "></i>
+                            <a href="/learn/"><i class="fa "></i>
                                 学习</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/life/"><i class="fa "></i>
+                            <a href="/life/"><i class="fa "></i>
                                 生活</a>
                         </li>
                         
                         <li role="presentation" class="text-center">
-                            <a href="/categories/tool/"><i class="fa "></i>
+                            <a href="/tool/"><i class="fa "></i>
                                 工具</a>
                         </li>
                         
@@ -157,13 +157,15 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        
+        <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
     </span>
     
     
     <span class="fa-wrap">
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="tag">搭建博客</a>
             
         </span>
     </span>
@@ -174,6 +176,11 @@
         <i class="fa fa-clock-o"></i>
         <span class="date-meta">
             2020/03/31</span>
+    </span>
+    
+    <span class="fa-wrap">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
     </span>
     
     
@@ -287,7 +294,7 @@ new Valine({
     el: '#vcomments',
     appId: 'bdukfbC9ENaz6hlXWipnhuhi-gzGzoHsz',
     appKey: 'zVJzS5tYIjXT0tvBYp6sVdGT',
-    placeholder: '说点什么吧',
+    placeholder: 'ヾﾉ≧∀≦)o 来呀！吐槽一番吧！',
     notify: false,
     verify: true,
     avatar: 'mm',
@@ -332,6 +339,16 @@ new Valine({
             <div class="col-sm-12">
                 <div class="busuanzi">
     
+    访问量:
+    <strong id="busuanzi_value_site_pv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    &nbsp; | &nbsp;
+    访客数:
+    <strong id="busuanzi_value_site_uv">
+        <i class="fa fa-spinner fa-spin"></i>
+    </strong>
+    
 </div>
             </div>
             <div class="col-sm-12">
@@ -352,9 +369,13 @@ new Valine({
 
 
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 
 <script src="/js/app.js?rev=@@hash.js"></script>
 
 	<script src="/live2d-widget/autoload.js"></script>
+	<!-- 页面点击小红心 -->
+    <script type="text/javascript" src="/js/click.js"></script>
 </body>
 </html>
