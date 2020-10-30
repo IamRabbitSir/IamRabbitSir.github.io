@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="RabbirSir&#39;s BLOG">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.1">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="https://iamrabbitsir.github.io">
+    <!--SEO-->
+
+<meta name="keywords" content="JAVA,开发" />
+
+
+<meta name="description" content="
+Java（计算机编程语言）：它只是计算机编程语言的一种，只是被大力发展和推崇，后台开发也常用它。当然内涵盖知识点无数，学无止境，如需精通必先自宫（开玩笑O(∩_∩)O），得勤学苦练是真，熟能生..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    记一次简单JAVA应用开发（菜鸟版） |
+    
+    RabbirSir&#39;s BLOG
+</title>
+
+<link rel="alternate" href="/atom.xml" title="RabbirSir&#39;s BLOG" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    /./img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='David Rabbit'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                生活就是游乐场！
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://iamrabbitsir.github.io">
+                        RabbirSir&#39;s BLOG</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/"><i class="fa list"></i>
+                                分类</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tags/"><i class="fa tags"></i>
+                                标签</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa archive"></i>
+                                归档</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/about/"><i class="fa user"></i>
+                                关于我</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="记一次简单JAVA应用开发（菜鸟版）">
+            
+            记一次简单JAVA应用开发（菜鸟版）
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/JAVA/" rel="tag">JAVA</a> <a class="tag-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2020/03/31</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <blockquote>
+<p><strong>Java（计算机编程语言）：它只是计算机编程语言的一种，只是被大力发展和推崇，后台开发也常用它。当然内涵盖知识点无数，学无止境，如需精通必先自宫（开玩笑O(∩_∩)O），得勤学苦练是真，熟能生巧后方能拿得出手。<a id="more"></a>，我系统学过，但离全栈开发工作者只差一步，就是付出。大概，没敢下决心往这条路上走吧。随有心，却无力。学了一点皮毛，偶尔只能简单写点代码，编个工具啥的仅此而已。</strong></p>
+</blockquote>
+<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a><strong>1.前言</strong></h3><hr>
+<p>&emsp;&emsp;时隔几个月，又准备开始写点自己的内容，以沉淀一些属于自己的东西。近期一周，又捡了捡自己领域原来所学的知识（Java开发），编个小工具其实都难倒了一直在独自战斗的业余选手。无技术指点，单凭百度来解决一些未曾遇到的难题，下面开始正题：</p>
+<p>现实：每月都会有十天左右需要去数据库按固定SQL按当天日期查询一些数据（称之响应率和填报率查询），然后将每条SQL的查询结果复制到EXCEL的基础数据表中进行相应固定公式的计算，最终会呈现一张数据分析结果表，用时大约15-20分钟。</p>
+<p>需求：通过程序化实现功能，根据外部配置文件可进行调整SQL语句，对数据查询结果进行封装，输出EXCEL。</p>
+<p>&emsp;&emsp;a）设计界面—简单（日期可选，再加三个按钮）</p>
+<p>&emsp;&emsp;b）罗列功能—交互、响应、反馈（等待/错误提示）</p>
+<p>&emsp;&emsp;c）编写代码—写了再说，重构啥的不会</p>
+<p>&emsp;&emsp;d）测试BUG和数据—输出值是否正确</p>
+<p>&emsp;&emsp;e）技术问题优化—遇到一个攻克一个</p>
+<h3 id="2-开发环境"><a href="#2-开发环境" class="headerlink" title="2.开发环境"></a><strong>2.开发环境</strong></h3><hr>
+<p>开发环境：JDK1.7.0_25</p>
+<p>开发工具：Eclipse</p>
+<p>数据库：MySql</p>
+<p>有各服务器的远程地址，有数据库的账号密码，有查询数据所用SQL语句…</p>
+<p>本地已安装Java环境，开发软件</p>
+<p>使用工具类：JDBCUtil(数据源连接)、DateChooser(日期选择控件)、jxl(Excel操作)</p>
+<h3 id="3-问题（已解决）"><a href="#3-问题（已解决）" class="headerlink" title="3.问题（已解决）"></a>3.问题（已解决）</h3><hr>
+<h4 id="3-1跨服务器查询"><a href="#3-1跨服务器查询" class="headerlink" title="3.1跨服务器查询"></a>3.1跨服务器查询</h4><p>Question：分别需要查询在两台阿里云服务器上的测试库和正式库的数据，服务器A(测试库)和B(正式库)，A可以本地直接访问，B需要远程到服务器后进行数据访问，但好在A和B都可外网。</p>
+<p>Answer：在本地开发用A测试库测试，打包成jar丢到B正式库验证正式数据。</p>
+<h4 id="3-2跨库查询"><a href="#3-2跨库查询" class="headerlink" title="3.2跨库查询"></a>3.2跨库查询</h4><p>Question：位于不同库中涉及多张关联表查询，用JDBCUtil工具类实现。</p>
+<p>Answer：在对url赋值时，去掉库名即可，关联表查询的SQL仍然适用。</p>
+<p>db.pro（外部配置文件，存放SQL）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">url &#x3D; jdbc:mysql:&#x2F;&#x2F;xxxxxxxxxxxx:端口号&#x2F;库名?useSSL&#x3D;false</span><br><span class="line">url &#x3D; jdbc:mysql:&#x2F;&#x2F;xxxxxxxxxxxx:端口号?useSSL&#x3D;false</span><br><span class="line"></span><br><span class="line">SELECT LEFT(b.shortcode,5),COUNT(1) FROM xxx.consult a, yyy.bcode b </span><br><span class="line">WHERE a.bcode&#x3D;b.bcode </span><br><span class="line">AND a.status &lt;&gt;&#39;10&#39;</span><br><span class="line">AND type &#x3D;&#39;10&#39; </span><br><span class="line">AND a.modifydate &lt; ? </span><br><span class="line">GROUP BY LEFT(b.shortcode,5) </span><br><span class="line">ORDER BY LEFT(b.shortcode,5) ASC</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-3Excel数据格式"><a href="#3-3Excel数据格式" class="headerlink" title="3.3Excel数据格式"></a>3.3Excel数据格式</h4><p>Question：写入Excel的数据非数值，打开文件后需要重新转换格式，而且部分数据默认成为科学计数法，要解决查询的值在写入Excel最终都是数值。</p>
+<p>Answer：jxl类有方法可以设置写入时的格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Double b1 &#x3D; 1313496257.810000;</span><br><span class="line">Double b2 &#x3D; 1000634179.940000;</span><br><span class="line">tSheet.addCell((WritableCell) new Label(0, 0, &quot;&quot; + b1));</span><br><span class="line">tSheet.addCell((WritableCell) new Label(0, 1, &quot;&quot; + b2));</span><br><span class="line">jxl.write.NumberFormat nf &#x3D; new jxl.write.NumberFormat(&quot;#.##&quot;); </span><br><span class="line">&#x2F;&#x2F;设置bai数字格式</span><br><span class="line">jxl.write.WritableCellFormat wcfN &#x3D; new jxl.write.WritableCellFormat(nf); &#x2F;&#x2F;设置表单格式</span><br><span class="line">jxl.write.Number labelNF &#x3D; new jxl.write.Number(2, 0, b1, wcfN); </span><br><span class="line">&#x2F;&#x2F;格式化数值</span><br><span class="line">tSheet.addCell(labelNF); &#x2F;&#x2F;在表单中添加格式化的数字</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="4-问题（未解决）"><a href="#4-问题（未解决）" class="headerlink" title="4.问题（未解决）"></a><strong>4.问题（未解决）</strong></h3><hr>
+<h4 id="4-1显示加载中"><a href="#4-1显示加载中" class="headerlink" title="4.1显示加载中"></a>4.1显示加载中</h4><p>Question：查询数据需要等待时间较长，查询按钮点击后一直卡着没响应，直到查询结束才可以接着操作，中间加个Loading图标或进度条。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="5-知识点"><a href="#5-知识点" class="headerlink" title="5.知识点"></a><strong>5.知识点</strong></h3><hr>
+<ul>
+<li><strong>JDK：java development kit</strong> (java开发工具)</li>
+<li><strong>JRE：java runtime environment</strong> (java运行环境)</li>
+<li><strong>JVM：java virtuak machine</strong> (java虚拟机)</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/10/22/Bit7sx.png" alt="avatar"></p>
+<p>它们之间是包含关系，JDK包含了JRE，JRE包含了JVM，核心是JVM。要想有深入的了解，还需要继续钻研学习，有兴趣可以看下《深入理解Java虚拟机》这本书，参考链接：<a href="https://blog.csdn.net/qq_41701956/article/details/81664921" target="_blank" rel="noopener">https://blog.csdn.net/qq_41701956/article/details/81664921</a></p>
+<p><a href="https://www.cnblogs.com/zuoxiaolong/p/life53.html" target="_blank" rel="noopener">https://www.cnblogs.com/zuoxiaolong/p/life53.html</a></p>
+<h3 id="5-拓展"><a href="#5-拓展" class="headerlink" title="5.拓展"></a><strong>5.拓展</strong></h3><hr>
+<p>附：Java知识体系图</p>
+<p><img src="https://s1.ax1x.com/2020/10/22/Bi3fmD.png" alt="avatar"></p>
+
+    </div>
+    
+    <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+            
+            <span class="reward-type">
+                <img class="wechat" src="../../img/Thanks.png"><b>微信打赏</b>
+            </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">
+        如果对你帮助有帮助，那留个言吧
+    </p>
+</div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            本博客文章转载请注明出处即可。
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/20200331/" class="pre-post btn btn-default" title='开篇之博客搭建（Hexo+GitHub）'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            开篇之博客搭建（Hexo+GitHub）</span>
+    </a>
+    
+    
+</div>
+
+<div id="comments">
+    
+
+<div id="vcomments" class="valine"></div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+<script>
+new Valine({
+    av: AV,
+    el: '#vcomments',
+    appId: 'bdukfbC9ENaz6hlXWipnhuhi-gzGzoHsz',
+    appKey: 'zVJzS5tYIjXT0tvBYp6sVdGT',
+    placeholder: 'ヾﾉ≧∀≦)o 来呀！吐槽一番吧！',
+    notify: false,
+    verify: false,
+    avatar: 'mm',
+    meta: 'nick,mail,link'.split(','),
+    pageSize: '10',
+    path: window.location.pathname,
+    lang: 'zh-CN'.toLowerCase()
+})
+</script>
+
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-前言"><span class="toc-text">1.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-开发环境"><span class="toc-text">2.开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-问题（已解决）"><span class="toc-text">3.问题（已解决）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1跨服务器查询"><span class="toc-text">3.1跨服务器查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2跨库查询"><span class="toc-text">3.2跨库查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3Excel数据格式"><span class="toc-text">3.3Excel数据格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-问题（未解决）"><span class="toc-text">4.问题（未解决）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1显示加载中"><span class="toc-text">4.1显示加载中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#"><span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-知识点"><span class="toc-text">5.知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-拓展"><span class="toc-text">5.拓展</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2020
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+	<script src="/live2d-widget/autoload.js"></script>
+	<!-- 页面点击小红心 -->
+    <script type="text/javascript" src="/js/click.js"></script>
+</body>
+</html>
