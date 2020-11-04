@@ -193,14 +193,14 @@
 <p><strong>同样操作一顿猛如虎，从Java版本到环境配置，再到eclipse配置，披荆斩棘，过关斩将，最终看到胜利的曙光（顺利BUILD SUCCESS）和（Starting service [Tomcat]）。</strong></p>
 </blockquote>
 <p>接下来回顾我都做了什么事情：</p>
-<h3 id="1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本"><a href="#1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本" class="headerlink" title="1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本"></a>1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本</h3><p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></p>
-<h3 id="2-配置系统环境变量"><a href="#2-配置系统环境变量" class="headerlink" title="2.配置系统环境变量"></a>2.配置系统环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">系统变量</span><br><span class="line">JAVA_HOME:路径如（D:\software\Java\JDK1.8）</span><br><span class="line">CLASSPATH:.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</span><br><span class="line">本地用户变量</span><br><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+<h2 id="1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本"><a href="#1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本" class="headerlink" title="1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本"></a>1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本</h2><p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></p>
+<h2 id="2-配置系统环境变量"><a href="#2-配置系统环境变量" class="headerlink" title="2.配置系统环境变量"></a>2.配置系统环境变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">系统变量</span><br><span class="line">JAVA_HOME:路径如（D:\software\Java\JDK1.8）</span><br><span class="line">CLASSPATH:.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</span><br><span class="line">本地用户变量</span><br><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
 
 <p><a href="https://imgchr.com/i/ByDdjf" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByDdjf.png" alt="ByDdjf.png"></a></p>
 <p><a href="https://imgchr.com/i/ByDBDS" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByDBDS.png" alt="ByDBDS.png"></a></p>
-<h3 id="3-配置项目环境"><a href="#3-配置项目环境" class="headerlink" title="3.配置项目环境"></a>3.配置项目环境</h3><p>右键项目工程的主目录-Properties-Java Compiler(选择最高版本1.8)，这样项目中各代码/注解就不会再有红叉。</p>
+<h2 id="3-配置项目环境"><a href="#3-配置项目环境" class="headerlink" title="3.配置项目环境"></a>3.配置项目环境</h2><p>右键项目工程的主目录-Properties-Java Compiler(选择最高版本1.8)，这样项目中各代码/注解就不会再有红叉。</p>
 <p><a href="https://imgchr.com/i/B6Igsg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/04/B6Igsg.png" alt="B6Igsg.png"></a></p>
-<h3 id="4-配置Eclipse的设置"><a href="#4-配置Eclipse的设置" class="headerlink" title="4.配置Eclipse的设置"></a>4.配置Eclipse的设置</h3><p><a href="https://imgchr.com/i/B6TYHH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/04/B6TYHH.png" alt="B6TYHH.png"></a></p>
+<h2 id="4-配置Eclipse的设置"><a href="#4-配置Eclipse的设置" class="headerlink" title="4.配置Eclipse的设置"></a>4.配置Eclipse的设置</h2><p><a href="https://imgchr.com/i/B6TYHH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/04/B6TYHH.png" alt="B6TYHH.png"></a></p>
 
     </div>
     
@@ -280,7 +280,7 @@ new Valine({
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#坑一："><span class="toc-text">坑一：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#坑二："><span class="toc-text">坑二：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本"><span class="toc-text">1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置系统环境变量"><span class="toc-text">2.配置系统环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-配置项目环境"><span class="toc-text">3.配置项目环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-配置Eclipse的设置"><span class="toc-text">4.配置Eclipse的设置</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#坑一："><span class="toc-text">坑一：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#坑二："><span class="toc-text">坑二：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本"><span class="toc-text">1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-配置系统环境变量"><span class="toc-text">2.配置系统环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-配置项目环境"><span class="toc-text">3.配置项目环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-配置Eclipse的设置"><span class="toc-text">4.配置Eclipse的设置</span></a></li></ol></li></ol>
         
     </div>
 </aside>
