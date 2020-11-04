@@ -218,6 +218,35 @@
 <p>这个时候会发现插入的这一长串字符串会把整个文章分割开，非常影响编写文章时的体验。如果能够把大段的base64字符串放在文章末尾，然后在文章中通过一个变量名来调用，文章就不会被分割的这么乱了。比如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![avatar][base64str]</span><br><span class="line">[base64str]:data:image&#x2F;png;base64,iVBORw0......</span><br></pre></td></tr></table></figure>
 <p><img src="https://s1.ax1x.com/2020/05/05/YkNEFJ.png" alt="avatar"></p>
+<h4 id="3-3增加分类和标签模块"><a href="#3-3增加分类和标签模块" class="headerlink" title="3.3增加分类和标签模块"></a>3.3增加分类和标签模块</h4><p>新创建的hexo博客没有分类和标签，点击分类或标签会提示404，需要额外创建。</p>
+<p>修改主题的配置文件themes/next/_config.yml，生效分类和标签：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">- page: 首页</span><br><span class="line">  url: /</span><br><span class="line">  icon: home</span><br><span class="line">- page: 分类</span><br><span class="line">  url: /categories/</span><br><span class="line">  icon: list</span><br><span class="line">- page: 标签</span><br><span class="line">  url: /tags/</span><br><span class="line">  icon: tags</span><br><span class="line">- page: 归档</span><br><span class="line">  url: /archives/</span><br><span class="line">  icon: archive</span><br><span class="line">- page: 关于我</span><br><span class="line">  url: /about/</span><br><span class="line">  icon: user</span><br></pre></td></tr></table></figure>
+
+<h5 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h5><p>a1）进入hexo博客所在的根目录，输入如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$hexo</span> new page categories</span><br></pre></td></tr></table></figure>
+
+<p>成功后提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: HEXO_ROOT\<span class="built_in">source</span>\categories\index.md</span><br></pre></td></tr></table></figure>
+
+<p>a2）对生成的index.md修改内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2020-03-31 17:51:10</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>a3）在source/_posts路径下的markdown文章，并修改其categories属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 对自我的重新定义与反思</span><br><span class="line">date: 2020-04-15</span><br><span class="line">categories: [&#39;生活&#39;]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h5 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h5><p>b1）同样在hexo博客所在的根目录，输入如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$hexo</span> new page categories</span><br></pre></td></tr></table></figure>
+
+<p>成功后提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: HEXO_ROOT\<span class="built_in">source</span>\categories\index.md</span><br></pre></td></tr></table></figure>
+
+<p>b2）对生成的index.md修改内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2020-03-31 17:55:15</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"tags"</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>b3）在source/_posts路径下的markdown文章，并修改其categories属性。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 对自我的重新定义与反思</span><br><span class="line">date: 2020-04-15</span><br><span class="line">tags: [<span class="string">'总结'</span>,<span class="string">'计划'</span>]</span><br></pre></td></tr></table></figure>
+
+
 <h3 id="4-知识点"><a href="#4-知识点" class="headerlink" title="4.知识点"></a><strong>4.知识点</strong></h3><hr>
 <p>从<a href="http://caibaojian.com/npm/" target="_blank" rel="noopener">npm安装文档</a> 学习，npm install 命令用来安装模块到 node_modules 目录，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install &lt;packageName&gt;</span><br></pre></td></tr></table></figure>
@@ -308,7 +337,7 @@ new Valine({
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-前言"><span class="toc-text">1.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-博客搭建"><span class="toc-text">2.博客搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1准备环境"><span class="toc-text">2.1准备环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2实施操作"><span class="toc-text">2.2实施操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-主题优化"><span class="toc-text">3.主题优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1添加文章"><span class="toc-text">3.1添加文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2添加图片"><span class="toc-text">3.2添加图片</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-知识点"><span class="toc-text">4.知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-参考链接"><span class="toc-text">5.参考链接</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-前言"><span class="toc-text">1.前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-博客搭建"><span class="toc-text">2.博客搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1准备环境"><span class="toc-text">2.1准备环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2实施操作"><span class="toc-text">2.2实施操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-主题优化"><span class="toc-text">3.主题优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1添加文章"><span class="toc-text">3.1添加文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2添加图片"><span class="toc-text">3.2添加图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3增加分类和标签模块"><span class="toc-text">3.3增加分类和标签模块</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#分类"><span class="toc-text">分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#标签"><span class="toc-text">标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-知识点"><span class="toc-text">4.知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-参考链接"><span class="toc-text">5.参考链接</span></a></li></ol>
         
     </div>
 </aside>
