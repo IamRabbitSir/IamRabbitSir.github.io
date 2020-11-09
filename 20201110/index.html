@@ -19,13 +19,14 @@
     <link rel="dns-prefetch" href="https://iamrabbitsir.github.io">
     <!--SEO-->
 
-<meta name="keywords" content="Eclipse,maven环境" />
+<meta name="keywords" content="IDEA资源" />
 
 
 <meta name="description" content="
-导入maven项目，因为环境的变更，各类环境需要重新配置，包括调整jdk版本，导入仓库，设置eclipse配置等。因为第一次做所以遇到了各种坑，现在总结下有哪些需要注意的地方。
+IDE开发工具IntelliJ IDEA破解资源
 
-坑一：拿到一..." />
+https://www.jetbrains.com/idea/download/other.html
+1.下载版本2020.2.3 IDEA..." />
 
 
 <meta name="robots" content="all" />
@@ -155,7 +156,7 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            <a class="tag-link" href="/tags/Eclipse/" rel="tag">Eclipse</a> <a class="tag-link" href="/tags/maven%E7%8E%AF%E5%A2%83/" rel="tag">maven环境</a>
+            <a class="tag-link" href="/tags/IDEA%E8%B5%84%E6%BA%90/" rel="tag">IDEA资源</a>
             
         </span>
     </span>
@@ -165,7 +166,7 @@
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
         <span class="date-meta">
-            2020/11/03</span>
+            2020/11/10</span>
     </span>
     
     
@@ -176,31 +177,22 @@
     
     <div class="post-body post-content">
         <blockquote>
-<p><strong>导入maven项目，因为环境的变更，各类环境需要重新配置，包括调整jdk版本，导入仓库，设置eclipse配置等。因为第一次做所以遇到了各种坑，现在总结下有哪些需要注意的地方。</strong></p>
+<p><strong>IDE开发工具IntelliJ IDEA破解资源</strong></p>
 </blockquote>
-<h1 id="坑一："><a href="#坑一：" class="headerlink" title="坑一："></a>坑一：</h1><p>拿到一个Maven项目，在本地进行环境部署，导入eclipse时显示红色的”/pom.xml”且无法选择，错误信息：Can’t import project platform from an existing workspace folder</p>
-<p>File→Import→Select Maven(Existing Maven Projects)</p>
-<p>Maven Projects(选择Root Directory)</p>
-<p><a href="https://imgchr.com/i/ByuWdg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByuWdg.png" alt="ByuWdg.png"></a></p>
-<blockquote>
-<p><strong>其实问题很简单，却找寻了各种方法来解决</strong></p>
-<p><strong>打开工作空间时，需要另外建一个空间去导入项目</strong></p>
-<p>感谢：<a href="https://stackoverflow.com/questions/30000107/maven-root-pom-xml-marked-as-red-when-importing-existing-project-into-eclipse" target="_blank" rel="noopener">https://stackoverflow.com/questions/30000107/maven-root-pom-xml-marked-as-red-when-importing-existing-project-into-eclipse</a></p>
-</blockquote>
-<p><a href="https://imgchr.com/i/ByGvxH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByGvxH.png" alt="ByGvxH.png"></a></p>
-<h1 id="坑二："><a href="#坑二：" class="headerlink" title="坑二："></a>坑二：</h1><p>启动项目找不到主类main方法，无法启动。如何启动Maven项目，如何更新依赖包。</p>
-<blockquote>
-<p><strong>同样操作一顿猛如虎，从Java版本到环境配置，再到eclipse配置，披荆斩棘，过关斩将，最终看到胜利的曙光（顺利BUILD SUCCESS）和（Starting service [Tomcat]）。</strong></p>
-</blockquote>
-<p>接下来回顾我都做了什么事情：</p>
-<h2 id="1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本"><a href="#1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本" class="headerlink" title="1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本"></a>1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本</h2><p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></p>
-<h2 id="2-配置系统环境变量"><a href="#2-配置系统环境变量" class="headerlink" title="2.配置系统环境变量"></a>2.配置系统环境变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">系统变量</span><br><span class="line">JAVA_HOME:路径如（D:\software\Java\JDK1.8）</span><br><span class="line">CLASSPATH:.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</span><br><span class="line">本地用户变量</span><br><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://imgchr.com/i/ByDdjf" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByDdjf.png" alt="ByDdjf.png"></a></p>
-<p><a href="https://imgchr.com/i/ByDBDS" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByDBDS.png" alt="ByDBDS.png"></a></p>
-<h2 id="3-配置项目环境"><a href="#3-配置项目环境" class="headerlink" title="3.配置项目环境"></a>3.配置项目环境</h2><p>右键项目工程的主目录-Properties-Java Compiler(选择最高版本1.8)，这样项目中各代码/注解就不会再有红叉。</p>
-<p><a href="https://imgchr.com/i/B6Igsg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/04/B6Igsg.png" alt="B6Igsg.png"></a></p>
-<h2 id="4-配置Eclipse的设置"><a href="#4-配置Eclipse的设置" class="headerlink" title="4.配置Eclipse的设置"></a>4.配置Eclipse的设置</h2><p><a href="https://imgchr.com/i/B6TYHH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/04/B6TYHH.png" alt="B6TYHH.png"></a></p>
+<p><a href="https://www.jetbrains.com/idea/download/other.html" target="_blank" rel="noopener">https://www.jetbrains.com/idea/download/other.html</a></p>
+<p>1.下载版本2020.2.3 IDEA  或者</p>
+<p>链接: <a href="https://pan.baidu.com/s/1TphVLzaZj4c97YI5obZv_g" target="_blank" rel="noopener">https://pan.baidu.com/s/1TphVLzaZj4c97YI5obZv_g</a> 提取码: f74p</p>
+<p>2.前面安装步骤跳过，注意最后一步。</p>
+<p><a href="https://imgchr.com/i/BHpbSe" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/09/BHpbSe.png" alt="BHpbSe.png"></a>3.下载破解工具压缩包</p>
+<p>链接: <a href="https://pan.baidu.com/s/19kkPUycd4nGjfBonuB3i6A" target="_blank" rel="noopener">https://pan.baidu.com/s/19kkPUycd4nGjfBonuB3i6A</a> </p>
+<p>提取码: xy3h</p>
+<p><img src="https://s1.ax1x.com/2020/11/09/BHpTJO.png" alt="BHpTJO.png">补丁，拖不进去，请重启 IDEA ，新建一个Java 项目，写一个空的 main 方法，再次试试注意：激活补丁，拖进去之后，激活补丁的位置不要更换，不要删除。</p>
+<p>4.拖入补丁后会弹框，点击 <code>Restart</code> 重启 <strong>idea</strong></p>
+<p><img src="https://s1.ax1x.com/2020/11/09/BHpoFK.png" alt="BHpoFK.png"></p>
+<p>5.配置助手会提示您，需要使用哪种激活方式，这里我们选择默认的 <code>Activation Code</code>，通过注册码来激活，点击为 <code>IDEA安装</code></p>
+<p><img src="https://s1.ax1x.com/2020/11/09/BHCRV1.png" alt="BHCRV1.png"></p>
+<p>如果过期就更换以下：</p>
+<p>HbVMaxqQrTt4UvDUk8fhyFT7uRdv48bqJsQMwVFp53YH9PZC9l+ZxAgnA60cLwwhURw/e4DcZZtle4tQzur4yWRk35qghES4JLFlmKty/UNiYh6RZyXeCNPTCvIqxT9HR2YKqQT93be6AfLTcbJwPSLO201g+HbMbg6+aK1MUJI</p>
 
     </div>
     
@@ -235,17 +227,11 @@
 </article>
 <div class="article-nav prev-next-wrap clearfix">
     
-    <a href="/20201109/" class="pre-post btn btn-default" title='eclipse导入Maven项目时遇到的坑'>
-        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-        <span class="hidden-xs">
-            eclipse导入Maven项目时遇到的坑</span>
-    </a>
     
-    
-    <a href="/20201020/" class="next-post btn btn-default" title='记一次简单JAVA应用开发（菜鸟版）'>
+    <a href="/20201109/" class="next-post btn btn-default" title='eclipse导入Maven项目时遇到的坑'>
         <span class="hidden-lg">下一篇</span>
         <span class="hidden-xs">
-            记一次简单JAVA应用开发（菜鸟版）</span><i class="fa fa-angle-right fa-fw"></i>
+            eclipse导入Maven项目时遇到的坑</span><i class="fa fa-angle-right fa-fw"></i>
     </a>
     
 </div>
@@ -286,7 +272,7 @@ new Valine({
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#坑一："><span class="toc-text">坑一：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#坑二："><span class="toc-text">坑二：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本"><span class="toc-text">1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-配置系统环境变量"><span class="toc-text">2.配置系统环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-配置项目环境"><span class="toc-text">3.配置项目环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-配置Eclipse的设置"><span class="toc-text">4.配置Eclipse的设置</span></a></li></ol></li></ol>
+        <p>暂无目录</p>
         
     </div>
 </aside>

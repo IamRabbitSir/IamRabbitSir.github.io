@@ -19,13 +19,11 @@
     <link rel="dns-prefetch" href="https://iamrabbitsir.github.io">
     <!--SEO-->
 
-<meta name="keywords" content="Eclipse,maven环境" />
+<meta name="keywords" content="Eclipse,Android环境" />
 
 
 <meta name="description" content="
-导入maven项目，因为环境的变更，各类环境需要重新配置，包括调整jdk版本，导入仓库，设置eclipse配置等。因为第一次做所以遇到了各种坑，现在总结下有哪些需要注意的地方。
-
-坑一：拿到一..." />
+在GitHub上下载了几个有关微信小程序开放源码，解压发现貌似跟安卓有关，内容逻辑比较值得研究，但运行需要配置环境，于是乎开启了eclipse配置Android环境之旅。过程是很坑的，需要花费..." />
 
 
 <meta name="robots" content="all" />
@@ -155,7 +153,7 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            <a class="tag-link" href="/tags/Eclipse/" rel="tag">Eclipse</a> <a class="tag-link" href="/tags/maven%E7%8E%AF%E5%A2%83/" rel="tag">maven环境</a>
+            <a class="tag-link" href="/tags/Android%E7%8E%AF%E5%A2%83/" rel="tag">Android环境</a> <a class="tag-link" href="/tags/Eclipse/" rel="tag">Eclipse</a>
             
         </span>
     </span>
@@ -165,7 +163,7 @@
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
         <span class="date-meta">
-            2020/11/03</span>
+            2020/11/09</span>
     </span>
     
     
@@ -176,32 +174,9 @@
     
     <div class="post-body post-content">
         <blockquote>
-<p><strong>导入maven项目，因为环境的变更，各类环境需要重新配置，包括调整jdk版本，导入仓库，设置eclipse配置等。因为第一次做所以遇到了各种坑，现在总结下有哪些需要注意的地方。</strong></p>
+<p><strong>在GitHub上下载了几个有关微信小程序开放源码，解压发现貌似跟安卓有关，内容逻辑比较值得研究，但运行需要配置环境，于是乎开启了eclipse配置Android环境之旅。<a id="more"></a>过程是很坑的，需要花费大量时间搜索和排错。为避坑还是建议抛弃Eclipse，使用专门开发Android的IDE工具，推荐android-studio或IntelliJ IDEA（在下一篇记录破解版安装激活）</strong></p>
 </blockquote>
-<h1 id="坑一："><a href="#坑一：" class="headerlink" title="坑一："></a>坑一：</h1><p>拿到一个Maven项目，在本地进行环境部署，导入eclipse时显示红色的”/pom.xml”且无法选择，错误信息：Can’t import project platform from an existing workspace folder</p>
-<p>File→Import→Select Maven(Existing Maven Projects)</p>
-<p>Maven Projects(选择Root Directory)</p>
-<p><a href="https://imgchr.com/i/ByuWdg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByuWdg.png" alt="ByuWdg.png"></a></p>
-<blockquote>
-<p><strong>其实问题很简单，却找寻了各种方法来解决</strong></p>
-<p><strong>打开工作空间时，需要另外建一个空间去导入项目</strong></p>
-<p>感谢：<a href="https://stackoverflow.com/questions/30000107/maven-root-pom-xml-marked-as-red-when-importing-existing-project-into-eclipse" target="_blank" rel="noopener">https://stackoverflow.com/questions/30000107/maven-root-pom-xml-marked-as-red-when-importing-existing-project-into-eclipse</a></p>
-</blockquote>
-<p><a href="https://imgchr.com/i/ByGvxH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByGvxH.png" alt="ByGvxH.png"></a></p>
-<h1 id="坑二："><a href="#坑二：" class="headerlink" title="坑二："></a>坑二：</h1><p>启动项目找不到主类main方法，无法启动。如何启动Maven项目，如何更新依赖包。</p>
-<blockquote>
-<p><strong>同样操作一顿猛如虎，从Java版本到环境配置，再到eclipse配置，披荆斩棘，过关斩将，最终看到胜利的曙光（顺利BUILD SUCCESS）和（Starting service [Tomcat]）。</strong></p>
-</blockquote>
-<p>接下来回顾我都做了什么事情：</p>
-<h2 id="1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本"><a href="#1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本" class="headerlink" title="1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本"></a>1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本</h2><p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></p>
-<h2 id="2-配置系统环境变量"><a href="#2-配置系统环境变量" class="headerlink" title="2.配置系统环境变量"></a>2.配置系统环境变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">系统变量</span><br><span class="line">JAVA_HOME:路径如（D:\software\Java\JDK1.8）</span><br><span class="line">CLASSPATH:.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</span><br><span class="line">本地用户变量</span><br><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://imgchr.com/i/ByDdjf" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByDdjf.png" alt="ByDdjf.png"></a></p>
-<p><a href="https://imgchr.com/i/ByDBDS" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/03/ByDBDS.png" alt="ByDBDS.png"></a></p>
-<h2 id="3-配置项目环境"><a href="#3-配置项目环境" class="headerlink" title="3.配置项目环境"></a>3.配置项目环境</h2><p>右键项目工程的主目录-Properties-Java Compiler(选择最高版本1.8)，这样项目中各代码/注解就不会再有红叉。</p>
-<p><a href="https://imgchr.com/i/B6Igsg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/04/B6Igsg.png" alt="B6Igsg.png"></a></p>
-<h2 id="4-配置Eclipse的设置"><a href="#4-配置Eclipse的设置" class="headerlink" title="4.配置Eclipse的设置"></a>4.配置Eclipse的设置</h2><p><a href="https://imgchr.com/i/B6TYHH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/11/04/B6TYHH.png" alt="B6TYHH.png"></a></p>
-
+<h1 id="坑一："><a href="#坑一：" class="headerlink" title="坑一："></a>坑一：</h1><h1 id="坑二："><a href="#坑二：" class="headerlink" title="坑二："></a>坑二：</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2><h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2>
     </div>
     
     <div class="reward" ontouchstart>
@@ -235,17 +210,17 @@
 </article>
 <div class="article-nav prev-next-wrap clearfix">
     
-    <a href="/20201109/" class="pre-post btn btn-default" title='eclipse导入Maven项目时遇到的坑'>
+    <a href="/20201110/" class="pre-post btn btn-default" title='eclipse导入Maven项目时遇到的坑'>
         <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
         <span class="hidden-xs">
             eclipse导入Maven项目时遇到的坑</span>
     </a>
     
     
-    <a href="/20201020/" class="next-post btn btn-default" title='记一次简单JAVA应用开发（菜鸟版）'>
+    <a href="/20201103/" class="next-post btn btn-default" title='eclipse导入Maven项目时遇到的坑'>
         <span class="hidden-lg">下一篇</span>
         <span class="hidden-xs">
-            记一次简单JAVA应用开发（菜鸟版）</span><i class="fa fa-angle-right fa-fw"></i>
+            eclipse导入Maven项目时遇到的坑</span><i class="fa fa-angle-right fa-fw"></i>
     </a>
     
 </div>
@@ -286,7 +261,7 @@ new Valine({
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#坑一："><span class="toc-text">坑一：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#坑二："><span class="toc-text">坑二：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-控制面板卸载所有Java相关应用，重新下载JDK1-8版本"><span class="toc-text">1.控制面板卸载所有Java相关应用，重新下载JDK1.8版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-配置系统环境变量"><span class="toc-text">2.配置系统环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-配置项目环境"><span class="toc-text">3.配置项目环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-配置Eclipse的设置"><span class="toc-text">4.配置Eclipse的设置</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#坑一："><span class="toc-text">坑一：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#坑二："><span class="toc-text">坑二：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-text">3.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-text">4.</span></a></li></ol></li></ol>
         
     </div>
 </aside>
